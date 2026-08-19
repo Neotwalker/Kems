@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070F24">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Interactive redesign lab — Марат Абзалов</title>
+  <link rel="stylesheet" href="css/lab-before-after.min.css">
+</head>
+<body>
+  <main class="lab" data-redesign-lab>
+    <div class="lab__glow lab__glow--one" aria-hidden="true"></div>
+    <div class="lab__glow lab__glow--two" aria-hidden="true"></div>
+
+    <header class="lab-header">
+      <a class="lab-brand" href="index.html" aria-label="Вернуться на главную">
+        <span class="lab-brand__mark" aria-hidden="true">MA</span>
+        <span class="lab-brand__text">Марат Абзалов</span>
+      </a>
+      <div class="lab-header__meta" aria-label="Информация о демо">
+        <span>Interactive lab</span>
+        <span>01 / redesign</span>
+      </div>
+    </header>
+
+    <section class="lab-hero" aria-labelledby="lab-title">
+      <div class="lab-copy">
+        <p class="lab-copy__eyebrow">До / после — не ползунок</p>
+        <h1 class="lab-copy__title" id="lab-title">Старый сайт превращается в новую систему прямо под курсором.</h1>
+        <p class="lab-copy__lead">Проведите по экрану. Новая версия появляется как цифровой слой, задерживается и постепенно растворяется обратно.</p>
+
+        <div class="lab-copy__legend" aria-label="Состояния макета">
+          <span class="lab-copy__legend-item"><i class="lab-copy__dot lab-copy__dot--old" aria-hidden="true"></i>Старая версия</span>
+          <span class="lab-copy__legend-line" aria-hidden="true"></span>
+          <span class="lab-copy__legend-item"><i class="lab-copy__dot lab-copy__dot--new" aria-hidden="true"></i>Новая версия</span>
+        </div>
+      </div>
+
+      <div class="redesign" data-redesign>
+        <div class="redesign__topline" aria-hidden="true">
+          <span class="redesign__state" data-redesign-state>OLD / NEW</span>
+          <span class="redesign__interaction">MOVE TO REBUILD</span>
+        </div>
+
+        <div class="redesign__perspective">
+          <div class="redesign__object" data-redesign-object>
+            <div class="redesign__shadow" aria-hidden="true"></div>
+            <div class="browser-shell">
+              <div class="browser-shell__bar" aria-hidden="true">
+                <span class="browser-shell__lights"><i></i><i></i><i></i></span>
+                <span class="browser-shell__address">marat-abzalov / redesign</span>
+                <span class="browser-shell__signal">● LIVE</span>
+              </div>
+              <div class="browser-shell__viewport" data-redesign-surface>
+                <canvas class="redesign-canvas" data-redesign-canvas aria-label="Интерактивное сравнение старой и новой версии сайта"></canvas>
+                <div class="redesign__fallback" data-redesign-fallback aria-hidden="true">
+                  <img src="img/lab-before-after/site-before.svg" alt="">
+                  <img src="img/lab-before-after/site-after.svg" alt="">
+                </div>
+                <div class="redesign__cursor" data-redesign-cursor aria-hidden="true">
+                  <span data-redesign-cursor-label>NEW</span>
+                </div>
+                <div class="redesign__hint" data-redesign-hint aria-hidden="true">
+                  <span class="redesign__hint-pointer"></span>
+                  <span>Проведите курсором</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="redesign__footer">
+          <div class="redesign__controls" role="group" aria-label="Показать версию сайта">
+            <button class="redesign__control is-active" type="button" data-redesign-mode="old">До</button>
+            <button class="redesign__control" type="button" data-redesign-mode="interactive">Интерактив</button>
+            <button class="redesign__control" type="button" data-redesign-mode="new">После</button>
+          </div>
+          <p class="redesign__note">Mouse / touch · без перехвата вертикального скролла</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="lab-footer">
+      <p>Прототип механики для главного экрана.</p>
+      <a href="archive-case.html">Смотреть проекты <span aria-hidden="true">↗</span></a>
+    </footer>
+  </main>
+  <script src="js/lab-before-after.min.js" defer></script>
+</body>
+</html>
